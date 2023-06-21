@@ -5,10 +5,8 @@ const app = createApp({
     return { data };
   },
   methods: {
-    addStringToImg() {
-      this.data.contacts.forEach((contact) => {
-        contact.avatar = "img/avatar" + contact.avatar + ".jpg";
-      });
+    getAvatar(avatar) {
+      return "img/avatar" + avatar + ".jpg";
     },
   },
 }).mount("#root");

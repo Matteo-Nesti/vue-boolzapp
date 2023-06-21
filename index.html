@@ -81,7 +81,7 @@
                         
                        <div class="contactList mt-2">
                            <div v-for="contact in data.contacts">
-                                <img :src="contact.avatar" :alt="contact.name" class="img-fluid">
+                                <img :src="getAvatar(contact.avatar)" :alt="contact.name" class="img-fluid">
                                 <span class="contactName">{{contact.name}}</span>
                            </div>
                        </div>
