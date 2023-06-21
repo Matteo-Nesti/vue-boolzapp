@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- mycss -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- data -->
+    <script src="js/data.js"></script>
     <!-- vueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
     <!-- script js -->
     <script defer src="js/script.js"></script>
     <title>Boozap web</title>
@@ -77,9 +80,9 @@
                         </div>
                         
                        <div class="contactList mt-2">
-                           <div>
-                                <img src="img/avatar_1.jpg" alt="first contact" class="img-fluid">
-                                <span class="contactName">michele</span>
+                           <div v-for="contact in data.contacts">
+                                <img :src="contact.avatar" :alt="contact.name" class="img-fluid">
+                                <span class="contactName">{{contact.name}}</span>
                            </div>
                        </div>
                         
@@ -115,8 +118,16 @@
                 </main>
 
                 <!--  footer chat -->
-                <footer>
-
+                <footer class="d-flex justify-content-between align-items-center">
+                    <div class="chatCommand text-center">
+                        <i class="bi bi-emoji-smile"></i>
+                    </div>
+                    <div class="messageInputContainer">
+                        <input class="form-control messageInput" type="search" placeholder="scrivi un messaggio" aria-label="Search">
+                    </div>
+                    <div class="chatCommand text-center">
+                        <i class="bi bi-mic-fill"></i>
+                    </div>
                 </footer>
             </div>
         </div>

@@ -160,8 +160,9 @@ left col style
 }
 
 .chatOption {
-    width: auto;
+    width: 50%;
     color: grey;
+    text-align: end;
 }
 
 .chatOption i {
@@ -180,6 +181,22 @@ main{
 /*  footer chat */
 
 .myCol60 footer {
-    background-color: grey;
+    background-color: #eaeaea;
     height: 80px;
 }
+
+.messageInputContainer {
+    flex: 0 0 80%;
+}
+
+.messageInput {
+    height: 50px;
+    border: none;
+}
+
+.chatCommand {
+    width: 10%;
+    font-size: 1.5rem;
+    color: grey;
+}
+
