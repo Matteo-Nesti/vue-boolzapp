@@ -171,13 +171,35 @@ left col style
 }
 
 /* main */
-main{
+.mainChat{
     height: calc(100vh - 195px);
     overflow: auto;
     background-image: url(/img/mine.jpg);
     background-size: contain;
     background-position: center;
+    display: flex;
+    flex-direction: column;
 }
+
+.msg {
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+    margin-top: .5rem;
+    border-radius: 10px; 
+}
+
+.msg.msgSent {
+    align-self: self-end;
+    background-color: #d5f9ba;
+    margin-right: 1rem;
+}
+
+.msg.msgRecived {
+   background-color: #fff;
+   align-self: self-start;
+   margin-left: 1rem;
+}
+
 /*  footer chat */
 
 .myCol60 footer {
