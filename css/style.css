@@ -122,10 +122,41 @@ left col style
     vertical-align: middle;
 }
 
-.bi-search {
+.myInput .bi-search {
     position: absolute;
     left: 15px;
     top: 8px;
     font-size: .7rem;
     color:#8f8f8f;
 }
+
+/* ------------- right COL ---------------- */
+/* header chat */
+.myCol60 header {
+    height: 50px;
+    background-color: #eaeaea;
+}
+
+.myCol60 img {
+    border-radius: 50%;
+    width: 11%;
+}
+
+.contactChatName {
+    font-size: .7rem;
+}
+.lastAccess {
+    font-size: .6rem;
+    color: grey;
+}
+
+.chatOption {
+    width: 25%;
+    color: grey;
+}
+
+.chatOption i {
+    padding-left: .3rem;
+}
+
+/*  footer chat */
