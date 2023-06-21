@@ -1,6 +1,6 @@
 body {
-    font-family: sans-serif;
     height: 100vh;
+    font-family: sans-serif;
     background: linear-gradient(
     to bottom,
     #009688  15%,
@@ -87,7 +87,24 @@ left col style
     background-color: #fff;
 }
 
+.contactList {
+    height:calc(100vh - 190px);
+    overflow: auto;
+}
+
+.contactList img {
+    border-radius: 50%;
+    width: 15%;
+}
+
+.contactName {
+    font-size: .7rem;
+    
+    padding-left: .7rem;
+}
+
 /*------------------ Search bar------------------ */
+
 
 .myInput {
     background-color: #e5e5e5;
@@ -95,6 +112,8 @@ left col style
     height: 30px;
     font-size: .7rem;
     padding-left: 2.5rem;
+    background-color: #fff;
+    border: 1px solid rgb(212, 212, 212);
 }
 
 .myInput::placeholder {
@@ -108,4 +127,5 @@ left col style
     left: 15px;
     top: 8px;
     font-size: .7rem;
+    color:#8f8f8f;
 }

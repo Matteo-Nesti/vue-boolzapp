@@ -15,14 +15,14 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- script js -->
     <script defer src="js/script.js"></script>
-    <title>Document</title>
+    <title>Boozap web</title>
 </head>
 <body>
     <div id="root" class="container">
 
     <!-- main layout -->
 
-        <div class="myRow mt-4">
+        <div class="myRow pt-3 pb-3">
 
             <!-- col left -->
 
@@ -65,13 +65,25 @@
                     </div>
                 </div>
 
-                <!-- search contact bar -->
-                <div class="bgcContact pt-2">
-                    <div class="container ">
-                        <div class="position-relative">
+                <!-- contact section -->
+
+                <div class="contactSection bgcContact pt-2">
+                    
+                    <!-- search contact bar -->
+                    <div class="container">
+                        <div class="position-relative searchBarContainer">
                             <input class="form-control myInput " type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
                             <i class="bi bi-search"></i>
                         </div>
+                        
+                       <div class="contactList mt-2">
+                           <div>
+                                <img src="img/avatar_1.jpg" alt="first contact" class="img-fluid">
+                                <span class="contactName">michele</span>
+                           </div>
+                       </div>
+                        
+
                     </div>
                 </div>
 
