@@ -35,12 +35,48 @@ body {
 left col style 
 ----------------------*/
 
+/* usersection */
 .userSection {
     height: 50px;
 }
 
+.userDates {
+    width: 50%;
+}
+
 .userImageContainer {
-    width: 15%;
+    width: 30%;
     border-radius: 50%;
     overflow: hidden;
+}
+
+#userName {
+    font-size: .7rem;
+    padding-left: .5rem;
+}
+
+/* not section */
+
+.bgcNot {
+    background-color: #8edafc;
+}
+
+.notSection {
+    height: 60px;
+}
+
+.notIconContainer {
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #8edafc;
+}
+
+.notSection p {
+    font-size: .6rem;
+    margin-bottom: 0;
+    margin-left: .5rem;
+    font-weight: bold;
 }
