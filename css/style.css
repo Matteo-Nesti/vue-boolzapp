@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    background: linear-gradient(
+    to bottom,
+    #009688  15%,
+    #d9dbd4 15% 100%
+    )
+}
+
+/*! DEBUG*/
+.debug {
+    border: dashed 1px red;
+}
+
+/*----------- Utility ----------*/
