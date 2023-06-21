@@ -37,21 +37,27 @@ left col style
 
 /* usersection */
 .userSection {
-    height: 50px;
+    height: 80px;
 }
 
 .userDates {
     width: 50%;
+    
+}
+
+.userOption i {
+    font-size: 1.4rem;
+    color: grey;
 }
 
 .userImageContainer {
-    width: 30%;
+    width: 25%;
     border-radius: 50%;
     overflow: hidden;
 }
 
 #userName {
-    font-size: .7rem;
+    font-size: 1.3rem;
     padding-left: .5rem;
 }
 
@@ -62,20 +68,23 @@ left col style
 }
 
 .notSection {
-    height: 60px;
+    height: 80px;
 }
 
 .notIconContainer {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     background-color: #fff;
     border-radius: 50%;
-    line-height: 40px;
+    line-height: 50px;
     color: #8edafc;
+}
+.notIconContainer i {
+    font-size: 1.3rem;
 }
 
 .notSection p {
-    font-size: .6rem;
+    font-size: 1rem;
     margin-bottom: 0;
     margin-left: .5rem;
     font-weight: bold;
@@ -88,17 +97,17 @@ left col style
 }
 
 .contactList {
-    height:calc(100vh - 190px);
+    height:calc(100vh - 246px);
     overflow: auto;
 }
 
 .contactList img {
     border-radius: 50%;
-    width: 15%;
+    width: 12%;
 }
 
 .contactName {
-    font-size: .7rem;
+    font-size: 1.3rem;
     
     padding-left: .7rem;
 }
@@ -109,54 +118,68 @@ left col style
 .myInput {
     background-color: #e5e5e5;
     border: transparent;
-    height: 30px;
-    font-size: .7rem;
+    height: 35px;
+    font-size: 1rem;
     padding-left: 2.5rem;
     background-color: #fff;
     border: 1px solid rgb(212, 212, 212);
 }
 
 .myInput::placeholder {
-    font-size: .6rem;
+    font-size: .8rem;
     font-weight: 500;
     vertical-align: middle;
 }
 
-.myInput .bi-search {
+.searchIconInput {
     position: absolute;
     left: 15px;
     top: 8px;
-    font-size: .7rem;
+    font-size: .9rem;
     color:#8f8f8f;
 }
 
 /* ------------- right COL ---------------- */
 /* header chat */
 .myCol60 header {
-    height: 50px;
+    height: 80px;
     background-color: #eaeaea;
 }
 
 .myCol60 img {
     border-radius: 50%;
-    width: 11%;
+    width: 13%;
 }
 
 .contactChatName {
-    font-size: .7rem;
+    font-size: 1.3rem;
 }
 .lastAccess {
-    font-size: .6rem;
+    font-size: 1rem;
     color: grey;
 }
 
 .chatOption {
-    width: 25%;
+    width: auto;
     color: grey;
 }
 
 .chatOption i {
+    font-size: 1.4rem;
     padding-left: .3rem;
 }
 
+/* main */
+main{
+    height: calc(100vh - 195px);
+    overflow: auto;
+    background-image: url(/img/mine.jpg);
+    background-size: contain;
+    background-position: center;
+}
 /*  footer chat */
+
+.myCol60 footer {
+    background-color: grey;
+    height: 80px;
+}
