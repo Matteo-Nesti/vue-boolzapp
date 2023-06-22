@@ -200,6 +200,11 @@ left col style
    margin-left: 1rem;
 }
 
+.msgDate {
+    font-size: .8rem;
+    color: grey;
+}
+
 /*  footer chat */
 
 .myCol60 footer {

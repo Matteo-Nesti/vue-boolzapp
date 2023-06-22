@@ -229,7 +229,7 @@ const app = createApp({
         return;
       } else {
         const newMessage = {
-          date: "10/01/2020 15:30:55",
+          date: new Date().toLocaleString(),
           message: this.newMessage,
           status: "sent",
         };
@@ -246,7 +246,7 @@ const app = createApp({
     checkNewMessages(index) {
       if (this.getNewMessage) {
         const newGuestMessage = {
-          date: "",
+          date: new Date().toLocaleString(),
           message: "ok",
           status: "received",
         };

@@ -119,8 +119,12 @@
 
                 <main class="mainChat" >
                     <div v-for = '(message, i) in contacts[currentIndex].messages' :class="message.status === 'sent' ? 'msg sent' : 'msg received'">
-                        {{contacts[currentIndex].messages[i].message}}
+                        {{contacts[currentIndex].messages[i].message}} 
+                        <div class="msgDate">
+                            {{ contacts[currentIndex].messages[i].date }}
+                        </div> 
                     </div>
+
                 </main>
 
                 <!--  footer chat -->
