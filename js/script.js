@@ -204,6 +204,18 @@ const app = createApp({
     };
   },
 
+  computed: {
+    getLastAccessDate() {
+      const currentContact = this.contacts[this.currentIndex];
+      const messages = currentContact.messages;
+      if (messages.length > 0) {
+        const lastMessage = messages[messages.length - 1];
+        return lastMessage.date;
+      }
+      return "Nessuna data disponibile";
+    },
+  },
+
   methods: {
     getAvatar(avatar) {
       return "img/avatar" + avatar + ".jpg";
@@ -223,6 +235,24 @@ const app = createApp({
         };
         this.contacts[index].messages.push(newMessage);
         this.newMessage = "";
+      }
+    },
+
+    startDelayedCheckNewMessages(index) {
+      setTimeout(() => {
+        this.checkNewMessages(index);
+      }, 2000);
+    },
+    checkNewMessages(index) {
+      if (this.getNewMessage) {
+        const newGuestMessage = {
+          date: "",
+          message: "ok",
+          status: "received",
+        };
+        this.contacts[index].messages.push(newGuestMessage);
+      } else {
+        return;
       }
     },
   },

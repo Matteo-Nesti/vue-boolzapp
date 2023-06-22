@@ -83,6 +83,7 @@
                            <div v-for="(contact, i) in contacts" class="py-2" @click="chatSelect(i)">
                                 <img :src="getAvatar(contact.avatar)" :alt="contact.name" class="img-fluid">
                                 <span class="contactName">{{contact.name}}</span>
+                                
                            </div>
                        </div>
                         
@@ -100,7 +101,9 @@
                             <img :src="getAvatar(contacts[currentIndex].avatar)" alt="" class="img-fluid">
                             <div class="ps-2">
                                 <div class="contactChatName">{{ contacts[currentIndex].name }}</div>
-                                <div class="lastAccess">ultimo accesso alle</div>
+                                <div class="lastAccess">ultimo accesso il
+                                    <time datetime="">{{ getLastAccessDate }}</time>
+                                </div>
                             </div>
                         </div>
 
@@ -126,7 +129,7 @@
                         <i class="bi bi-emoji-smile"></i>
                     </div>
                     <div class="messageInputContainer">
-                        <input v-model.trim="newMessage" class="form-control messageInput" type="search" placeholder="scrivi un messaggio" aria-label="Search" @keyup.enter="getNewMessage(currentIndex)">
+                        <input v-model.trim="newMessage" class="form-control messageInput" type="search" placeholder="scrivi un messaggio" aria-label="Search" @keyup.enter="getNewMessage(currentIndex), startDelayedCheckNewMessages(currentIndex)">
                     </div>
                     <div class="chatCommand text-center">
                         <i class="bi bi-mic-fill"></i>
