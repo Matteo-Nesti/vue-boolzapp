@@ -4,6 +4,7 @@ const app = createApp({
   data() {
     return {
       currentIndex: 0,
+      newMessage: "",
       user: {
         name: "Aurora Politi",
         avatar: "_io",
@@ -210,6 +211,19 @@ const app = createApp({
     chatSelect(index) {
       this.currentIndex !== index;
       this.currentIndex = index;
+    },
+    getNewMessage(index) {
+      if (!this.newMessage) {
+        return;
+      } else {
+        const newMessage = {
+          date: "10/01/2020 15:30:55",
+          message: this.newMessage,
+          status: "sent",
+        };
+        this.contacts[index].messages.push(newMessage);
+        this.newMessage = "";
+      }
     },
   },
 }).mount("#root");
