@@ -231,6 +231,7 @@ const app = createApp({
     },
 
     chatSelect(targetId) {
+      this.currentIndex = targetId;
       this.selectedContact = this.contacts[targetId];
     },
 
