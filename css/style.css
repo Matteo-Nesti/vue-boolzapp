@@ -186,6 +186,19 @@ left col style
     margin-right: 1rem;
     margin-top: .5rem;
     border-radius: 10px; 
+    position: relative;
+}
+
+.panelControl {
+    width: 100px;
+    height: 70px;
+    background-color: #a3a3a3;
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    color: #fff;
+    padding: .5rem;
+    z-index: 1;
 }
 
 .msg.sent{

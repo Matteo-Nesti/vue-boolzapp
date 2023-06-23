@@ -7,6 +7,7 @@ const app = createApp({
       newMessage: "",
       searchContact: "",
       selectedContact: null,
+      showPanel: false,
 
       user: {
         name: "Aurora Politi",
@@ -230,9 +231,11 @@ const app = createApp({
       return "img/avatar" + avatar + ".jpg";
     },
 
-    chatSelect(targetId) {
-      this.currentIndex = targetId;
-      this.selectedContact = this.contacts[targetId];
+    chatSelect(i) {
+      const contact = this.filteredContact[i];
+      const index = this.contacts.findIndex((c) => c.id === contact.id);
+      this.currentIndex = index;
+      this.selectedContact = this.contacts[index];
     },
 
     getNewMessage(index) {
@@ -264,6 +267,14 @@ const app = createApp({
         this.contacts[index].messages.push(newGuestMessage);
       } else {
         return;
+      }
+    },
+
+    openPanel() {
+      if (this.showPanel === false) {
+        this.showPanel = true;
+      } else {
+        this.showPanel = false;
       }
     },
   },

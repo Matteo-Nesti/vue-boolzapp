@@ -115,6 +115,8 @@
                 </header>
 
                 <!-- main chat -->
+
+                <!-- main chat -->
                     <main class="mainChat">
                         <div v-for="(message, i) in contacts[currentIndex].messages" :class="message.status === 'sent' ? 'msg sent' : 'msg received'">
                         {{ contacts[currentIndex].messages[i].message }}
