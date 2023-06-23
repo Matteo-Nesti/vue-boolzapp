@@ -6,6 +6,7 @@ const app = createApp({
       currentIndex: 0,
       newMessage: "",
       searchContact: "",
+      selectedContact: null,
 
       user: {
         name: "Aurora Politi",
@@ -230,7 +231,7 @@ const app = createApp({
     },
 
     chatSelect(targetId) {
-      this.contacts.id = targetId;
+      this.selectedContact = this.contacts[targetId];
     },
 
     getNewMessage(index) {
