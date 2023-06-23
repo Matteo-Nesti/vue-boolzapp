@@ -74,13 +74,13 @@
                     <!-- search contact bar -->
                     <div class="container">
                         <div class="position-relative searchBarContainer">
-                            <input class="form-control myInput " type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
+                            <input class="form-control myInput " type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search" v-model="searchContact">
                             <i class="bi bi-search searchIconInput"></i>
                         </div>
                         <!-- contacts list -->
                        <div class="contactList mt-2">
                         <!-- iterate contacts -->
-                           <div v-for="(contact, i) in contacts" class="py-2" @click="chatSelect(i)">
+                           <div v-for="(contact, i) in filteredContact" class="py-2" @click="chatSelect(contact.id)">
                                 <img :src="getAvatar(contact.avatar)" :alt="contact.name" class="img-fluid">
                                 <span class="contactName">{{contact.name}}</span>
                                 

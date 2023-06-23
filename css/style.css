@@ -173,7 +173,7 @@ left col style
 /* main */
 .mainChat{
     height: calc(100vh - 195px);
-    overflow: auto;
+    overflow-y: scroll;
     background-image: url(/img/mine.jpg);
     background-size: contain;
     background-position: center;

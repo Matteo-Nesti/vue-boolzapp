@@ -5,6 +5,8 @@ const app = createApp({
     return {
       currentIndex: 0,
       newMessage: "",
+      searchContact: "",
+
       user: {
         name: "Aurora Politi",
         avatar: "_io",
@@ -214,16 +216,23 @@ const app = createApp({
       }
       return "Nessuna data disponibile";
     },
+    filteredContact() {
+      const search = this.searchContact.toLowerCase();
+      return this.contacts.filter((user) => {
+        return user.name.toLowerCase().includes(search);
+      });
+    },
   },
 
   methods: {
     getAvatar(avatar) {
       return "img/avatar" + avatar + ".jpg";
     },
-    chatSelect(index) {
-      this.currentIndex !== index;
-      this.currentIndex = index;
+
+    chatSelect(targetId) {
+      this.contacts.id = targetId;
     },
+
     getNewMessage(index) {
       if (!this.newMessage) {
         return;
@@ -241,7 +250,7 @@ const app = createApp({
     startDelayedCheckNewMessages(index) {
       setTimeout(() => {
         this.checkNewMessages(index);
-      }, 2000);
+      }, 1000);
     },
     checkNewMessages(index) {
       if (this.getNewMessage) {
